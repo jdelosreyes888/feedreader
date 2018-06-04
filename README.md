@@ -7,10 +7,12 @@ This is a project from Udacity FEND program that tests the application that read
 1. Clone the repository to your local hard drive.
 2. Navigate to your project folder and click index.html.  
 
-Optional:  Run the app via a web server.
-    To use python webserver type: python -m http.server 8000 
+Optional:  Run the app via a web server.\
+1.  To use python webserver type the following in the command prompt: python -m http.server 8000 
+2.  Go to your web browser and navigate to http://localhost:8000
 
 ## References:
-[Jasmine](http://jasmine.github.io/)
+[Udacity FEND](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001)\
+[Jasmine](http://jasmine.github.io/)\
+[How to use Python as webserver](https://docs.python.org/3.4/howto/webservers.html)
 
-[Udacity FEND](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001)
