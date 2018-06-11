@@ -94,7 +94,6 @@ $(function() {
             loadFeed(0, () => {
                 feed = $('.feed .entry');
                 done();
-                console.log(feed.length);
             });
         });
 
@@ -113,25 +112,23 @@ $(function() {
     let firstFeed, 
         secondFeed;    
 
-    beforeEach(function(done) {
-        loadFeed(0, function()  {
-            firstFeed = document.querySelector('.feed').innerHTML;
-            
+        beforeEach(function(done) {
+            loadFeed(0, function()  {
+                firstFeed = document.querySelector('.feed').innerHTML;
+                  
+                loadFeed(1, function() {
+                    secondFeed = document.querySelector('.feed').innerHTML;
+                    done();
+                });
+            });
         });
-
-        loadFeed(1, function() {
-            secondFeed = document.querySelector('.feed').innerHTML;
-            done();
-        });
-    });
-
     /* Compare the two loaded feeds */
-
+            
     it('loads new feeds', (done) => {
         expect(secondFeed !== firstFeed).toBe(true);
         done();
+        });
     });
 
-}); 
     /* END of New Feed Selection */      
 }());
